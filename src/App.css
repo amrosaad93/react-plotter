@@ -6,3 +6,16 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(121, 120, 120);
 }
+
+.main-page {
+  display: flex;
+  padding: 0px 0px 50px 0px;
+}
+
+.columns {
+  flex: 0.2;
+  height: 100%;
+  padding: 20px;
+  justify-content: center;
+  background-color: white;
+}
