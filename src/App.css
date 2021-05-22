@@ -19,3 +19,91 @@
   justify-content: center;
   background-color: white;
 }
+
+.plotter {
+  flex: 0.8;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.drag-target {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.clear-btn {
+  border:none;
+  cursor: pointer;
+  background: none;
+  color: #DE493F;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.input {
+  border: solid 2px rgb(148, 147, 147);
+  border-radius: 10px;
+  width: 100%;
+  margin: 0px 60px 0px 30px;
+  padding: 0px 0px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  padding: 8px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+
+.title {
+  flex: 0.2;
+  text-align: center;
+}
+
+.title p{
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+
+.input {
+  flex: 0.8;
+}
+
+.column-item {
+  padding: 5px 10px ;
+  border: solid 2px rgb(195, 195, 199);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  align-content:center;
+}
+
+.column-item p {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.column-item-type {
+  width: fit-content;
+  padding: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+
+.no-info-msg {
+  text-align: center;
+  margin: 100px 20px 10px 20px;
+  font-size:xx-large;
+  font-weight:300;
+  color: rgb(121, 120, 120);
+}
