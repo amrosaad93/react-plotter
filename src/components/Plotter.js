@@ -10,9 +10,6 @@ function Plotter() {
     const [dimension, setDimension] = useState("none");
     const [measure, setMeasure] = useState("none");
 
-    console.log(measure); 
-    console.log(dimension);
-
     return (
         <div className="plotter">
            <ParameterBar title="Dimensions" type='dimension' setDimension={setDimension}/>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDrag } from 'react-dnd';
 
-
 const ColumnItem = ({name, type}) => {
 
     const[{isDragging} , drag] = useDrag({

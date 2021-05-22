@@ -9,7 +9,7 @@ function Columns() {
     const [error, setError] = useState('');
     const [columnsData, setColumnsData] = useState([]);
 
-   const fetchColumns = async () => {
+    const fetchColumns = async () => {
         setLoading(true);
         try {
             const response = await fetch(columnsDataUri);
@@ -27,43 +27,39 @@ function Columns() {
             console.log(error);
         }
     
-   };
+    };
 
-   useEffect(() => {
+    useEffect(() => {
        fetchColumns();  
-   }, []);
+    }, []);
 
-   if(error !== '') {
+    if(error !== '') {
     return <p className="no-info-msg">{error}</p>
-  }
+    }
 
-if(loading) {
+    if(loading) {
+        return (
+            <div>
+            <h3 style={{  color: 'rgb(121, 120, 120)'}}>Columns</h3>
+            <hr/>
+            <p className="no-info-msg">Loading...</p>
+
+        </div>
+        );
+    }
     return (
         <div>
-        <h3 style={{  color: 'rgb(121, 120, 120)'}}>Columns</h3>
-        <hr/>
-        <p className="no-info-msg">Loading...</p>
+                <h3 style={{  color: 'rgb(121, 120, 120)'}}>Columns</h3>
+            <hr/>
 
-    </div>
-    );
-}
-return (
-    <div>
-            <h3 style={{  color: 'rgb(121, 120, 120)'}}>Columns</h3>
-        <hr/>
+            {columnsData.map((column) => {
+                return  <ColumnItem key={column.name} name={column.name}type={column.function}/>
+            })}
 
-        {columnsData.map((column) => {
-            return  <ColumnItem key={column.name} name={column.name}type={column.function}/>
-        })}
+        
 
-     
-
-    </div>
-)   ;
-      
-          
-
-    
+        </div>
+    )   ;  
 }
 
 export default Columns

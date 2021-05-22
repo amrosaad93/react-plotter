@@ -6,6 +6,7 @@ const ParameterBar = ({title , type , setDimension , setMeasure}) => {
     const bgColor = type==='dimension'? '#1E9360' : '#1F6088';
     
     const [content, setContent] = useState(type==='dimension'?  "Add Dimension from column" : "Add Measure from Column");
+
     const [{isOver}, drop] = useDrop({
         accept: {type} === "dimension" ? "dimension" : 'measure',
         drop: (item, moniter) => {
@@ -22,12 +23,10 @@ const ParameterBar = ({title , type , setDimension , setMeasure}) => {
     const clear = () => {
         setContent(type==='dimension'?  "Add Dimension from column" : "Add Measure from Column");
         type==='dimension'? setDimension('none'):setMeasure('none'); 
-        console.log('clicked')
     };
 
     return (
-        <div className='drag-target'
-            ref={drop}>
+        <div className='drag-target' ref={drop}>
             <div className='title'>
                 <p>{title}</p>
             </div>
