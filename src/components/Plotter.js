@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 import Plot from './Plot'
+import ParameterBar from './ParameterBar';
 
 import '../App.css';
-import ParameterBar from './ParameterBar';
 
 function Plotter() {
 
